@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-
+import { Navigation } from "./components";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -17,10 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={montserrat.className}>
-        <nav className="flex justify-end gap-4 p-6">
-          <p><a className="text-blue-400 font-bold hover:text-blue-600" href="/">Home</a></p>
-          <p><a className="hover:text-blue-600" href="/about">About</a></p>
-        </nav>
+        <Navigation />   
         {children}
       </body>
     </html>
