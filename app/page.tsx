@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 
 const Home = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center p-24">
-      <h1 className="text-6xl">Next 14</h1>
+    <main className="p-24">
+      <h1 className="text-center text-6xl">Next 14</h1>
     </main>
   );
 };

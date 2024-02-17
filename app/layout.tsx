@@ -1,3 +1,4 @@
+import { FC, ReactNode } from "react";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
@@ -9,17 +10,17 @@ export const metadata: Metadata = {
   description: "Next.js 14 with Tailwind and TypeScript",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+type Props = { children: ReactNode };
+
+const RootLayout: FC<Props> = ({ children }) => {
   return (
     <html lang="en">
       <body className={montserrat.className}>
-        <Navigation />   
+        <Navigation />
         {children}
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
