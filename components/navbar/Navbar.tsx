@@ -1,35 +1,26 @@
-'use client';
+// import { HomeIcon } from '@primer/octicons-react';
 
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import navLink from './Navbar.styles';
+import { MenuLink } from '@/components';
+import styles from '../navbar/Navbar.module.css';
 import { HomeIcon } from '@primer/octicons-react';
 
 const navLinks = [
-  { path: '/about', text: 'About' },
-  { path: '/pricing', text: 'Pricing' },
-  { path: '/contact', text: 'Contact' },
+  { id: 'a', path: '/about', label: 'About' },
+  { id: 'b', path: '/pricing', label: 'Pricing' },
+  { id: 'c', path: '/contact', label: 'Contact' },
 ];
 
 const Navigation = () => {
 
-  const pathname = usePathname();
-
   return (
-    <nav className={navLink.container}>
-      <Link
-        href="/"
-        className={navLink.link + (pathname === '/' && navLink.active)}
-      >
-        <HomeIcon /> Home
-      </Link>
-      <section className="flex gap-4">
-        {navLinks.map(({ path, text }) => (
-          <Link
-            key={path}
-            href={path}
-            className={navLink.link + (pathname === path && navLink.active)}
-          >{text}</Link>
+    <nav className={styles.container}>
+      <MenuLink path="/" label="Home">
+        <HomeIcon />
+      </MenuLink>
+      <section className="flex gap-2">
+        {navLinks.map(link => (
+          <MenuLink key={link.id} path={link.path} label={link.label} />
         ))}
       </section>
     </nav>

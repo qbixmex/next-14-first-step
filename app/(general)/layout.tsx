@@ -1,16 +1,12 @@
-import { Navbar } from '@/components';
 import { FC, ReactNode } from 'react';
 
 type Props = { children: ReactNode };
 
 const GeneralLayout: FC<Props> = ({ children }) => {
   return (
-    <>
-      <Navbar />
-      <main className="grid place-content-center h-[calc(100vh-72px)]">
-        {children}
-      </main>
-    </>
+    <main className="grid place-content-center h-[calc(100vh-72px)]">
+      {children}
+    </main>
   );
 };
 

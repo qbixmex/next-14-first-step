@@ -2,6 +2,7 @@ import { FC, ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 const montserrat = Montserrat({ subsets: ['latin'] });
+import { Navbar } from '@/components';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -15,6 +16,7 @@ const RootLayout: FC<Props> = ({ children }) => {
   return (
     <html lang="en">
       <body className={montserrat.className}>
+        <Navbar />
         {children}
       </body>
     </html>

@@ -1,0 +1,12 @@
+.container {
+  @apply flex justify-between items-center bg-blue-800 bg-opacity-30 p-6 rounded;
+}
+
+.link {
+  @apply flex items-center gap-2 font-bold hover:text-blue-400 transition-colors;
+}
+
+.activeLink {
+  @apply text-blue-300;
+}
+
