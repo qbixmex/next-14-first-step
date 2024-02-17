@@ -1,13 +1,12 @@
-import { FC, ReactNode } from "react";
-import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
-import "./globals.css";
-import { Navigation } from "./components";
-const montserrat = Montserrat({ subsets: ["latin"] });
+import { FC, ReactNode } from 'react';
+import type { Metadata } from 'next';
+import { Montserrat } from 'next/font/google';
+const montserrat = Montserrat({ subsets: ['latin'] });
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Next 14",
-  description: "Next.js 14 with Tailwind and TypeScript",
+  title: 'Next 14',
+  description: 'Next.js 14 with Tailwind and TypeScript',
 };
 
 type Props = { children: ReactNode };
@@ -16,7 +15,6 @@ const RootLayout: FC<Props> = ({ children }) => {
   return (
     <html lang="en">
       <body className={montserrat.className}>
-        <Navigation />
         {children}
       </body>
     </html>
