@@ -27,33 +27,51 @@ bun dev
 
 ### For building for production:
 
+**NPM**
 ```bash
-# NPM
 npm run build
+```
 
-# YARN
+**YARN**
+
+```bash
 yarn build
+```
 
-# PNPM
+**PNPM**
+
+```bash
 pnpm build
+```
 
-# BUN
+**BUN**
+
+```bash
 bun build
 ```
 
 ### After build run production mode (optional):
 
+**NPM**
 ```bash
-# NPM
 npm run start
+```
 
-# YARN
+**YARN**
+
+```bash
 yarn start
+```
 
-# PNPM
+**PNPM**
+
+```bash
 pnpm start
+```
 
-# BUN
+**BUN**
+
+```bash
 bun start
 ```
 
@@ -61,7 +79,7 @@ bun start
 
 ### NextJs Recommendation
 
-**Edit: ```next.config.mjs```***
+**Edit: ```next.config.mjs```**
 
 ```typescript
 /** @type {import('next').NextConfig} */
@@ -78,9 +96,9 @@ export default nextConfig;
 > touch dockerfile
 ```
 
-**Then paste the following code:**
+**Then copy and paste the following code:**
 
-```docker
+```dockerfile
 FROM node:18-alpine AS base
 
 # Install dependencies only when needed
