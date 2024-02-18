@@ -1,24 +1,31 @@
 # Next First Steps
 
-## Getting Started
+## Run development:
 
-**Run development:**
+**NPM**
+```bash
+npm run dev
+```
+
+**YARN**
 
 ```bash
-# NPM
-npm run dev
-
-# YARN
 yarn dev
+```
 
-# PNPM
+**PNPM**
+
+```bash
 pnpm dev
+```
 
-# BUN
+**BUN**
+
+```bash
 bun dev
 ```
 
-**For building for production:**
+### For building for production:
 
 ```bash
 # NPM
@@ -34,7 +41,7 @@ pnpm build
 bun build
 ```
 
-**After build run production mode (optional):**
+### After build run production mode (optional):
 
 ```bash
 # NPM
@@ -50,7 +57,9 @@ pnpm start
 bun start
 ```
 
-## NextJs Recommendation
+## Docker Image
+
+### NextJs Recommendation
 
 **Edit: ```next.config.mjs```***
 
@@ -143,7 +152,7 @@ ENV HOSTNAME "0.0.0.0"
 CMD ["node", "server.js"]
 ```
 
-## Create Docker Image
+### Create Docker Image
 
 **Note: ```after -t flag, you define the image name.```**
 
@@ -154,9 +163,10 @@ CMD ["node", "server.js"]
 > docker build -t next-first-steps .
 ```
 
-## Mount Docker Image
+### Mount Docker Image
 
 **Note: ```left port number is our machine and right port is the image port.```**
+
 **Note: ```-d flag means detach mode.```**
 
 
