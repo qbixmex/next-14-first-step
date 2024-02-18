@@ -90,7 +90,7 @@ const nextConfig = {
 export default nextConfig;
 ```
 
-**Create file ```dockerfile``` at root:
+**Create file ```dockerfile``` at root:**
 
 ```bash
 > touch dockerfile
@@ -178,7 +178,7 @@ CMD ["node", "server.js"]
 
 
 ```bash
-> docker build -t next-first-steps .
+docker build -t next-first-steps .
 ```
 
 ### Mount Docker Image
@@ -189,5 +189,5 @@ CMD ["node", "server.js"]
 
 
 ```bash
-> docker container run -dp 3000:3000 next-first-steps
+docker container run -dp 3000:3000 next-first-steps
 ```
