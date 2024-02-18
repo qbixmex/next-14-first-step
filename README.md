@@ -93,7 +93,7 @@ export default nextConfig;
 **Create file ```dockerfile``` at root:**
 
 ```bash
-> touch dockerfile
+touch dockerfile
 ```
 
 **Then copy and paste the following code:**
